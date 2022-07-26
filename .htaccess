@@ -1,0 +1,16 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+php_flag display_errors on
+php_value error_reporting E_NONE
+php_value error_log /home/domains/xn----7sbadbby1bmuzte2m.xn--p1ai/errors.log
+
+ErrorDocument 404 /404.php
